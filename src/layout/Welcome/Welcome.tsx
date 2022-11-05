@@ -1,3 +1,4 @@
+import { FC } from "react";
 import {
 	SubTitleWelcome,
 	WelcomeSide,
@@ -5,15 +6,20 @@ import {
 	WelcomeTitle,
 } from "./WelcomeStyles";
 
-const Welcome = () => {
+const Welcome: FC<{ title?: string; subtitle?: string }> = ({
+	title,
+	subtitle,
+}) => {
 	return (
 		<WelcomeSideContainer>
 			<WelcomeSide>
-				<WelcomeTitle>Bienvenido a</WelcomeTitle>
+				<WelcomeTitle>{title ? title : `Bienvenido a`}</WelcomeTitle>
 				<SubTitleWelcome>
-					Donde buscar y dar de alta tu negocio nunca fue tan
+					{subtitle
+						? subtitle
+						: `Donde buscar y dar de alta tu negocio nunca fue tan
 					sencillo, unete y disfruta de los mejores servicios, es
-					¡Gratis!
+					¡Gratis!`}
 				</SubTitleWelcome>
 			</WelcomeSide>
 		</WelcomeSideContainer>
