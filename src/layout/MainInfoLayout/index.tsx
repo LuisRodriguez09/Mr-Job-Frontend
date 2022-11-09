@@ -1,1 +1,1 @@
-export { default } from "./MainInfoLayout";
+export { default } from './MainInfoLayout';

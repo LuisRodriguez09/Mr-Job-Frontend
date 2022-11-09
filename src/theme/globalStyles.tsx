@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import "@fontsource/roboto";
+import { createGlobalStyle } from 'styled-components';
+import '@fontsource/roboto';
 
 const GlobalStyle = createGlobalStyle`
 	body {
