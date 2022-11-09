@@ -1,13 +1,16 @@
-import React from "react";
-import Button from "../Inputs/Button";
+import React, { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Button from '../Inputs/Button';
 import {
 	LogoHeader,
 	NavbarHeader,
 	NavbarLiOptions,
 	NavbarOptionsContainer,
-} from "./HeaderStyles";
+} from './HeaderStyles';
 
-const Header = () => {
+const Header: FC = () => {
+	const navigate = useNavigate();
+
 	return (
 		<NavbarHeader>
 			<LogoHeader
@@ -15,7 +18,9 @@ const Header = () => {
 				alt="Logo Mr Job"
 			/>
 			<NavbarOptionsContainer>
-				<NavbarLiOptions>Inicio</NavbarLiOptions>
+				<NavbarLiOptions onClick={() => navigate('./login')}>
+					Inicio
+				</NavbarLiOptions>
 				<NavbarLiOptions>Nuestros servicios</NavbarLiOptions>
 				<NavbarLiOptions>Directorio</NavbarLiOptions>
 				<NavbarLiOptions>Login</NavbarLiOptions>

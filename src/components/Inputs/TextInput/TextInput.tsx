@@ -1,6 +1,7 @@
-import { StyledTextInput } from "./TextInputStyles";
+import { FC } from 'react';
+import { StyledTextInput } from './TextInputStyles';
 
-const TextInput = () => {
+const TextInput: FC = () => {
 	return <StyledTextInput type="text" />;
 };
 

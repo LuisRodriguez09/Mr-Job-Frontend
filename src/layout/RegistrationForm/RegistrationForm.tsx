@@ -1,60 +1,55 @@
-import { gapi } from "gapi-script";
-import React, { useEffect } from "react";
-import GoogleLogin from "react-google-login";
-import { useNavigate } from "react-router-dom";
-import Button from "../../components/Inputs/Button";
-import TextInput from "../../components/Inputs/TextInput";
+import { FC, useEffect } from 'react';
+import GoogleLogin from 'react-google-login';
+import { useNavigate } from 'react-router-dom';
+import Button from '../../components/Inputs/Button';
+import TextInput from '../../components/Inputs/TextInput';
+import TextRedirect from '../../components/TextRedirect';
+import { useStartLogin } from '../../hooks/useStartLogin';
 import {
 	BoxField,
-	FormContainer,
 	HaveAccountText,
 	LabelField,
 	LoginSide,
 	LoginViewContainer,
-	SubTitleLogin,
-	TitleLogin,
-} from "../Login/LoginStyles";
-import Welcome from "../Welcome";
+} from '../Login/LoginStyles';
+import Welcome from '../Welcome';
+import {
+	SubTitleRegister,
+	TitleRegister,
+	FormContainer,
+	OrRegisterWithStyles,
+} from './RegistrationFormStyles';
 
-const RegistrationForm = () => {
-	const clientId: string =
-		process.env.REACT_APP_AUTH_GOOGLE_CLIENT_ID !== undefined
-			? process.env.REACT_APP_AUTH_GOOGLE_CLIENT_ID
-			: "";
-
+const RegistrationForm: FC = () => {
 	const navigate = useNavigate();
 
-	useEffect(() => {
-		const start = () => {
-			gapi.client.init({
-				clientId: clientId,
-				scope: "",
-			});
-		};
-		gapi.load("client:auth2", start);
-	});
+	const { clientId, startGapi } = useStartLogin();
 
-	const responseGoogle = (response: any) => {
-		console.log(response);
-	};
+	useEffect(() => {
+		startGapi();
+	});
 
 	return (
 		<LoginViewContainer>
 			<Welcome />
 			<LoginSide>
 				<div>
-					<TitleLogin>Unirme como Job</TitleLogin>
-					<SubTitleLogin>
-						Si tienes un negocio y quieres aumentar tus ventas,
-						unete como Job y disfruta de tus clientes. Quiero buscar
-						un servicio
-					</SubTitleLogin>
+					<TitleRegister>Unirme como Job</TitleRegister>
+					<SubTitleRegister>
+						Si tienes un negocio y quieres aumentar tus ventas, unete como Job y
+						disfruta de tus clientes.{' '}
+						<TextRedirect onClick={() => navigate('./register')}>
+							Quiero buscar un servicio
+						</TextRedirect>
+					</SubTitleRegister>
 				</div>
 				<FormContainer>
 					<BoxField>
-						<LabelField>
-							Correo electronico o número de teléfono
-						</LabelField>
+						<LabelField>Correo electronico o número de teléfono</LabelField>
+						<TextInput />
+					</BoxField>
+					<BoxField>
+						<LabelField>Número de teléfono (Opcional)</LabelField>
 						<TextInput />
 					</BoxField>
 					<BoxField>
@@ -62,21 +57,34 @@ const RegistrationForm = () => {
 						<TextInput />
 					</BoxField>
 					<BoxField>
+						<LabelField>Especifica el tipo de servicio que ofreces</LabelField>
+						<TextInput />
+					</BoxField>
+					<BoxField>
+						<LabelField>Escribe el nombre de tu negocio</LabelField>
+						<TextInput />
+					</BoxField>
+					<BoxField>
 						<LabelField></LabelField>
 						<Button size="full">Iniciar sesión</Button>
 					</BoxField>
 					<HaveAccountText>
-						¿No tienes una cuenta?{" "}
-						<span onClick={() => navigate("/register")}>
-							Registrarme
-						</span>
+						¿Tienes una cuenta?{' '}
+						<TextRedirect onClick={() => navigate('/login')}>
+							Iniciar sesión
+						</TextRedirect>
 					</HaveAccountText>
+					<OrRegisterWithStyles>
+						<hr />
+						O registrate con
+						<hr />
+					</OrRegisterWithStyles>
 					<GoogleLogin
 						clientId={clientId}
 						buttonText="Login"
-						onSuccess={responseGoogle}
-						onFailure={responseGoogle}
-						cookiePolicy={"single_host_origin"}
+						onSuccess={() => navigate('/')}
+						onFailure={() => navigate('/')}
+						cookiePolicy={'single_host_origin'}
 					/>
 				</FormContainer>
 			</LoginSide>

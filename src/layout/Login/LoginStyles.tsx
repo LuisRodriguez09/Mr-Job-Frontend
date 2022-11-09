@@ -1,13 +1,21 @@
-import styled from "styled-components";
-import "@fontsource/poppins";
+import styled from 'styled-components';
+import '@fontsource/poppins';
 
 export const LoginViewContainer = styled.div`
 	height: 100vh;
 	display: flex;
-	font-family: "Poppins";
+	font-family: 'Poppins';
 
 	& > div {
 		width: 50%;
+	}
+
+	@media (max-width: 1000px) {
+		flex-direction: column;
+		& > div {
+			width: 100%;
+			margin: 0;
+		}
 	}
 `;
 
@@ -33,7 +41,6 @@ export const TitleLogin = styled.h1`
 `;
 
 export const SubTitleLogin = styled.p`
-	position: absolute;
 	width: 461px;
 	height: 30px;
 	padding: 15px 0;
@@ -43,12 +50,15 @@ export const SubTitleLogin = styled.p`
 	font-size: 18px;
 	line-height: 30px;
 	color: #52525b;
+
+	@media (max-width: 1000px) {
+		width: 100%;
+	}
 `;
 
 export const FormContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin: 54px 0;
 `;
 
 export const LabelField = styled.label`

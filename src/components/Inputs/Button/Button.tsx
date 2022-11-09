@@ -1,8 +1,8 @@
-import { ComponentPropsWithoutRef, FC, ReactNode } from "react";
-import { typesOptions } from "../../../theme/theme";
-import { StyledButton } from "./ButtonStyles";
+import { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
+import { typesOptions } from '../../../theme/theme';
+import { StyledButton } from './ButtonStyles';
 
-export interface IButtonProps extends ComponentPropsWithoutRef<"button"> {
+export interface IButtonProps extends ComponentPropsWithoutRef<'button'> {
 	children: ReactNode;
 	color?: typesOptions;
 	outline?: ReactNode;

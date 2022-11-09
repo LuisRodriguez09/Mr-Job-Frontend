@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
+import { ReactNode } from 'react';
+import styled from 'styled-components';
 import {
 	getColorTypeButton,
 	getSizeTypeButton,
 	typesOptions,
-} from "../../../theme/theme";
+} from '../../../theme/theme';
 
 interface StyledButtonProps {
 	type?: typesOptions;
@@ -13,10 +13,11 @@ interface StyledButtonProps {
 }
 
 export const StyledButton = styled.button<StyledButtonProps>`
+	cursor: pointer;
 	background-color: ${({ color, outline }) =>
-		outline ? "white" : getColorTypeButton(color ?? "")};
+		outline ? 'white' : getColorTypeButton(color ?? '')};
 	border-radius: 10px;
-	border: ${({ outline }) => (outline ? "1.5px solid #181F25" : "none")};
-	color: ${({ outline }) => (outline ? "#164066" : "white")};
+	border: ${({ outline }) => (outline ? '1.5px solid #181F25' : 'none')};
+	color: ${({ outline }) => (outline ? '#164066' : 'white')};
 	${({ size }) => getSizeTypeButton(size)}
 `;

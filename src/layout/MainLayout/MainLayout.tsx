@@ -1,9 +1,9 @@
-import React from "react";
-import Header from "../../components/Header";
-import MainInfoLayout from "../MainInfoLayout";
-import { MainLayoutContainer } from "./MainLayoutStyles";
+import React, { FC } from 'react';
+import Header from '../../components/Header';
+import MainInfoLayout from '../MainInfoLayout';
+import { MainLayoutContainer } from './MainLayoutStyles';
 
-const MainLayout = () => {
+const MainLayout: FC = () => {
 	return (
 		<MainLayoutContainer>
 			<Header />
