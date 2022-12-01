@@ -9,8 +9,8 @@ export const WelcomeSide = styled.div`
 	display: flex;
 	flex-direction: column;
 	margin: 156px 174px;
-	@media (max-width: 420px) {
-		margin: 100px;
+	@media (max-width: 850px) {
+		margin: 148px 16px 44px 16px;
 	}
 `;
 
@@ -31,7 +31,7 @@ export const SubTitleWelcome = styled.p`
 
 export const WelcomeTitle = styled.h1`
 	width: 423px;
-	height: 80px;
+	height: auto;
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 700;

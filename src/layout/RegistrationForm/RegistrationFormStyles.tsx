@@ -1,5 +1,18 @@
 import styled from 'styled-components';
 
+export const TitleContainer = styled.div`
+	@media (max-width: 850px) {
+		padding: 16px;
+		& > p {
+			width: 100%;
+		}
+		& > h1 {
+			width: 100%;
+			margin: 16px 0 50px 0;
+		}
+	}
+`;
+
 export const TitleRegister = styled.h1`
 	width: 526px;
 	height: 62px;
@@ -16,7 +29,6 @@ export const TitleRegister = styled.h1`
 `;
 
 export const SubTitleRegister = styled.p`
-	position: absolute;
 	width: 526px;
 	height: 54px;
 	padding: 15px 0;
@@ -31,7 +43,12 @@ export const SubTitleRegister = styled.p`
 export const FormContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin: 120px 0;
+	margin: 40px 0;
+	@media (max-width: 850px) {
+		& > div {
+			padding: 16px;
+		}
+	}
 `;
 
 export const OrRegisterWithStyles = styled.div`

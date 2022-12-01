@@ -14,9 +14,11 @@ import {
 	LoginSide,
 	LoginViewContainer,
 	SubTitleLogin,
+	TextRedirectContainer,
 	TitleLogin,
 } from './LoginStyles';
 import ImageForgotPassword from '../../images/pass.png';
+import { TitleContainer } from '../RegistrationForm/RegistrationFormStyles';
 
 const Login: FC = () => {
 	const clientId: string =
@@ -44,12 +46,12 @@ const Login: FC = () => {
 		<LoginViewContainer>
 			<Welcome img={ImageForgotPassword} />
 			<LoginSide>
-				<div>
+				<TitleContainer>
 					<TitleLogin>Iniciar sesión</TitleLogin>
 					<SubTitleLogin>
 						Inicia sesión y ten control total de tu cuenta.
 					</SubTitleLogin>
-				</div>
+				</TitleContainer>
 				<FormContainer>
 					<BoxField>
 						<LabelField>Correo electronico o número de teléfono</LabelField>
@@ -59,12 +61,14 @@ const Login: FC = () => {
 						<LabelField>Contraseña</LabelField>
 						<TextInput />
 					</BoxField>
-					<TextRedirect
-						align="right"
-						onClick={() => navigate('/forgot-password')}
-					>
-						Olvidé mi contraseña
-					</TextRedirect>
+					<TextRedirectContainer>
+						<TextRedirect
+							align="right"
+							onClick={() => navigate('/forgot-password')}
+						>
+							Olvidé mi contraseña
+						</TextRedirect>
+					</TextRedirectContainer>
 					<BoxField>
 						<LabelField></LabelField>
 						<Button size="full">Iniciar sesión</Button>

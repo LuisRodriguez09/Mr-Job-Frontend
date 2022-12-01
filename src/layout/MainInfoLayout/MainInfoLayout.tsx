@@ -1,23 +1,33 @@
 import { FC } from 'react';
 import Button from '../../components/Inputs/Button';
-import { InfoLayoutContainer } from './MainInfoLayoutStyles';
+import {
+	InfoLayoutContainer,
+	LeftContentMainInfo,
+	RightContentMainInfo,
+} from './MainInfoLayoutStyles';
 
 const MainInfoLayout: FC = () => {
 	return (
 		<InfoLayoutContainer>
-			<div>
+			<LeftContentMainInfo>
 				<h1>Obten un 50% en tu primer servicio</h1>
-			</div>
-			<div>
-				Unete y encuentra + de 200 Servicios cerca de ti, o da de alta tu
-				negocio y haz crecer tu negocio
-			</div>
-			<div>
-				<Button color="primary">Buscar servicios</Button>
-				<Button outline={true} size="medium">
-					Dar de alta mi negocio
-				</Button>
-			</div>
+				<p>
+					Unete a Mr.Job y encuentra los meres servicios cerca de ti, con
+					profesionales a tu alcance busca o da de alta tu negocios en dos
+					simples pasos.
+				</p>
+				<div>
+					<Button color="primary">Buscar servicios</Button>
+					<Button outline={true} size="medium">
+						Dar de alta mi negocio
+					</Button>
+				</div>
+			</LeftContentMainInfo>
+			<RightContentMainInfo>
+				<div></div>
+				<div></div>
+				<div></div>
+			</RightContentMainInfo>
 		</InfoLayoutContainer>
 	);
 };

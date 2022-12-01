@@ -1,12 +1,19 @@
 import { ReactNode } from 'react';
 
-export type typesOptions = 'primary' | 'secondary' | 'success' | 'danger';
+export type typesOptions =
+	| 'primary'
+	| 'secondary'
+	| 'success'
+	| 'danger'
+	| 'dark';
 export type typesAlignation = 'right' | 'left' | 'center';
 export type typesColorsButtons = '#181F25' | 'black';
 
 export const getColorTypeButton: any = (color: typesOptions) => {
 	switch (color) {
 		case 'primary':
+			return '#181F25';
+		case 'dark':
 			return '#181F25';
 		default:
 			return 'black';

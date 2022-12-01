@@ -22,7 +22,7 @@ export const LoginViewContainer = styled.div`
 export const LoginSide = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin: 156px 174px;
+	margin: 100px 174px;
 `;
 
 export const TitleLogin = styled.h1`
@@ -59,6 +59,11 @@ export const SubTitleLogin = styled.p`
 export const FormContainer = styled.div`
 	display: flex;
 	flex-direction: column;
+	@media (max-width: 1000px) {
+		& > div {
+			padding: 16px;
+		}
+	}
 `;
 
 export const LabelField = styled.label`
@@ -77,5 +82,11 @@ export const HaveAccountText = styled.p`
 	& > span {
 		cursor: pointer;
 		color: #2f81cb;
+	}
+`;
+
+export const TextRedirectContainer = styled.div`
+	@media (max-width: 1000px) {
+		padding: 16px;
 	}
 `;

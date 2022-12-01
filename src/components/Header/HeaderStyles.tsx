@@ -2,15 +2,18 @@ import styled from 'styled-components';
 
 export const NavbarHeader = styled.nav`
 	display: flex;
-	justify-content: space-between;
+	background: #181f25;
+	justify-content: space-around;
+	padding: 10px 0px;
 `;
 
 export const LogoHeader = styled.img`
-	height: 100px;
+	height: 50px;
+	align-self: center;
 `;
 
 export const NavbarOptionsContainer = styled.div`
-	color: #164066;
+	color: white;
 	display: flex;
 	list-style: none;
 	padding: 12px 9px;
@@ -19,4 +22,8 @@ export const NavbarOptionsContainer = styled.div`
 export const NavbarLiOptions = styled.li`
 	cursor: pointer;
 	margin: 0 1rem;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 `;
