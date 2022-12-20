@@ -23,7 +23,9 @@ const Header: FC = () => {
 				<NavbarLiOptions>Directorio</NavbarLiOptions>
 				<NavbarLiOptions>Login</NavbarLiOptions>
 				<NavbarLiOptions>
-					<Button color="dark">Crear cuenta</Button>
+					<Button outline={true} color="dark">
+						Crear cuenta
+					</Button>
 				</NavbarLiOptions>
 			</NavbarOptionsContainer>
 		</NavbarHeader>

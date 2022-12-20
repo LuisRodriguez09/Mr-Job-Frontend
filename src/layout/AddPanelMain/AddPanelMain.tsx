@@ -4,13 +4,14 @@ import {
 	ContainerFreeMonth,
 	ContainerNameServices,
 	ContainerNeedAService,
+	// ImageWomanStyles,
 	RightContentAddService,
 	TitleNeedAService,
 } from './AddPanelMainStyles';
 import ImageMecanic from '../../images/pass.png';
 import ImageGarden from '../../images/garden.png';
 import ImageFemaleTeacher from '../../images/female-teacher.png';
-import ImageWoman from '../../images/woman-addpanel.png';
+// import ImageWoman from '../../images/woman-addpanel.png';
 import { servicesNames } from './constants';
 
 const AddPanelMain: FC = () => {
@@ -19,7 +20,7 @@ const AddPanelMain: FC = () => {
 			<ContainerNeedAService className="self-center">
 				<div className="flex flex-col justify-evenly">
 					<TitleNeedAService>¿Necesitas un plomero?</TitleNeedAService>
-					<p>
+					<p className="text-center sm:text-left">
 						Busca los servicios mas cercanos a ti, desde plomeros, jardineros,
 						mecanicos, arquitectos, estilistas, servicios de mudanzas y más, con
 						garantia de servicio.
@@ -31,19 +32,19 @@ const AddPanelMain: FC = () => {
 						<div>
 							<img src={ImageMecanic} alt="" />
 						</div>
-						<span>Mecánicos</span>
+						<p className="text-center font-bold">Mecánicos</p>
 					</div>
 					<div>
 						<div>
 							<img src={ImageFemaleTeacher} alt="" />
 						</div>
-						<span>Maestros</span>
+						<p className="text-center font-bold">Maestros</p>
 					</div>
 					<div>
 						<div>
 							<img src={ImageGarden} alt="" />
 						</div>
-						<span>Jardineros</span>
+						<p className="font-bold">Jardineros</p>
 					</div>
 				</RightContentAddService>
 			</ContainerNeedAService>
@@ -57,13 +58,11 @@ const AddPanelMain: FC = () => {
 					<div className="flex w-3/4 justify-between mt-4">
 						<Button size="medium">Iniciar mi prueba gratis</Button>
 						<Button size="medium" outline={true}>
-							Contactar un asesor
+							Contactar un asesors
 						</Button>
 					</div>
 				</div>
-				<div>
-					<img src={ImageWoman} alt="" />
-				</div>
+				<div></div>
 			</ContainerFreeMonth>
 			<ContainerNameServices>
 				<h3 className="text-center mb-3">Algunos de nuestro servicios</h3>

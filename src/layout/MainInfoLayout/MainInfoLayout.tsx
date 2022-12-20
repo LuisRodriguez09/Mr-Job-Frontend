@@ -11,7 +11,7 @@ const MainInfoLayout: FC = () => {
 		<InfoLayoutContainer>
 			<LeftContentMainInfo>
 				<h1>Obten un 50% en tu primer servicio</h1>
-				<p>
+				<p className="text-center sm:text-left">
 					Unete a Mr.Job y encuentra los meres servicios cerca de ti, con
 					profesionales a tu alcance busca o da de alta tu negocios en dos
 					simples pasos.
