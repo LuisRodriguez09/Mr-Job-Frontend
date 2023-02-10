@@ -6,5 +6,5 @@ export const StyledTextInput = styled.input`
 	border: 1px solid #cbd5e1;
 	border-radius: 12px;
 	height: 60px;
-	font-size: 1.9rem;
+	font-size: 1rem;
 `;

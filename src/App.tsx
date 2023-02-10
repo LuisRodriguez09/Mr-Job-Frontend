@@ -6,6 +6,7 @@ import RegisterForm from './layout/RegistrationForm';
 import { FC } from 'react';
 import ForgotPassword from './layout/ForgotPassword';
 import EmailSent from './layout/EmailSent';
+import Profile from './layout/Profile'
 
 const App: FC = () => {
 	return (
@@ -17,6 +18,7 @@ const App: FC = () => {
 				<Route path="/register" element={<RegisterForm />} />
 				<Route path="/forgot-password" element={<ForgotPassword />} />
 				<Route path="/email-sent" element={<EmailSent />} />
+				<Route path="/profile" element={<Profile />} />
 			</Routes>
 		</Router>
 	);
