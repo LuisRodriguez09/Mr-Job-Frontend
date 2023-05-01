@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledTextInput = styled.input`
-	background: #f8fafc;
-
-	border: 1px solid #cbd5e1;
+	// background: #f8fafc;
+	padding: 12px;
+	border: 1px solid #276AA7;
 	border-radius: 12px;
-	height: 60px;
+	height: 56px;
 	font-size: 1rem;
 `;

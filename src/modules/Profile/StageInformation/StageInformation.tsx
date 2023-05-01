@@ -1,10 +1,27 @@
-import { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 import TextInput from '../../../components/Inputs/TextInput';
 import ImageJesus from '../../../images/deleteimagejesus.png';
 
 const classesLabels = 'font-semibold';
 
 const StageInformation: FC = () => {
+	const [infoProfile, setInfoProfie] = useState(
+		JSON.parse(localStorage.getItem('infoProfile') || '{}')
+	);
+	const { register, handleSubmit, reset } = useForm({
+		mode: 'onChange',
+	});
+
+	useEffect(() => {
+		reset(infoProfile);
+	}, []);
+
+	const onSubmit = handleSubmit((data) => {
+		localStorage.setItem('infoProfile', JSON.stringify(data));
+		setInfoProfie(data);
+	});
+
 	return (
 		<div className="py-4">
 			<h1 className="font-bold text-6xl">Información</h1>
@@ -17,48 +34,48 @@ const StageInformation: FC = () => {
 						<p className="font-semibold">5560978904</p>
 					</div>
 				</div>
-				<form className="flex flex-col p-2 bg-gray-panel">
+				<form onSubmit={onSubmit} className="flex flex-col p-2 bg-gray-panel">
 					<div className="flex">
 						<div className="flex flex-col w-2/4 px-2">
 							<label className={classesLabels}>Nombre completo</label>
-							<TextInput />
+							<TextInput name="name" register={register} />
 						</div>
 						<div className="flex flex-col w-2/4 px-2">
 							<label className={classesLabels}>Correo electrónico</label>
-							<TextInput />
+							<TextInput name="email" register={register} />
 						</div>
 					</div>
 					<div className="flex">
 						<div className="flex flex-col w-1/4 px-2">
 							<label className={classesLabels}>Número de teléfono</label>
-							<TextInput />
+							<TextInput name="phoneNumber" register={register} />
 						</div>
 						<div className="flex flex-col w-1/4 px-2">
 							<label className={classesLabels}>Fecha de nacimiento</label>
-							<TextInput />
+							<TextInput name="birthdate" register={register} />
 						</div>
 						<div className="flex flex-col w-2/4 px-2">
 							<label className={classesLabels}>RFC</label>
-							<TextInput />
+							<TextInput name="rfc" register={register} />
 						</div>
 					</div>
 					<div className="flex">
 						<div className="flex flex-col w-2/4 px-2">
 							<label className={classesLabels}>Dirección</label>
-							<TextInput />
+							<TextInput name="address" register={register} />
 						</div>
 						<div className="flex flex-col w-1/4 px-2">
 							<label className={classesLabels}>Código postal</label>
-							<TextInput />
+							<TextInput name="zipCode" register={register} />
 						</div>
 						<div className="flex flex-col w-1/4 px-2">
 							<label className={classesLabels}>Colonia</label>
-							<TextInput />
+							<TextInput name="suburb" register={register} />
 						</div>
 					</div>
 					<div className="flex flex-col w-1/4 px-2">
 						<label className={classesLabels}>Estado</label>
-						<TextInput />
+						<TextInput name="state" register={register} />
 					</div>
 					<button className="bg-blue-1640 w-2/4 rounded-lg text-white h-12 self-end">
 						Guardar

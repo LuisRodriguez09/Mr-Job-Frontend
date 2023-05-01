@@ -1,0 +1,202 @@
+{
+	"DATA": [
+		{
+			"idAssignation": 1,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 343,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 2,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 563,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 3,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 235,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 5,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 652,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 6,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 235,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 7,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 652,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		}
+	],
+	"FINISHED": [
+		{
+			"idAssignation": 1,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 343453,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 2,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 523463,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 3,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 23435,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 5,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 652,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 6,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 2435,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 7,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 6752,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		}
+	],
+	"CANCELED": [
+		{
+			"idAssignation": 1,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 1343,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 2,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 5673,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 3,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 23535,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 5,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 652,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 6,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 235,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 7,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 652,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		}
+	],
+	"WARRANTY": [
+		{
+			"idAssignation": 1,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 343,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 2,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 563,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 3,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 235,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 5,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 652,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 6,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 235,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		},
+		{
+			"idAssignation": 7,
+			"name": "Aplanado casa, San Luis Coatepec Harinas",
+			"price": 5000,
+			"idProcess": 652,
+			"startDate": "26 January 2023",
+			"stagePrice": 2
+		}
+	]
+}

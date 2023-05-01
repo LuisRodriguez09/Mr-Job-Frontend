@@ -17,5 +17,6 @@ module.exports = {
 		'@typescript-eslint/strict-boolean-expressions': 'off',
 		'@typescript-eslint/triple-slash-reference': 'off',
 		'@typescript-eslint/prefer-nullish-coalescing': 'off',
+		'@typescript-eslint/no-misused-promises': 'off',
 	},
 };
