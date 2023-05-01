@@ -28,7 +28,7 @@ const FooterMainLayout: FC = () => {
 				</InfoFooter>
 				<RecieveInfoContainer>
 					<div>
-						<span>Quieres recibir información</span>
+						<span className=" ">Quieres recibir información</span>
 						<p>
 							Inscribete y recibe lo más relevante de Mr.Job, puedes cancelar el
 							servicio cuando quieras.

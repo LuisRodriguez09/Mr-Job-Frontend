@@ -5,6 +5,10 @@ export const FooterContainer = styled.div`
 	color: white;
 	width: 100%;
 	height: 362px;
+	@media (max-width: 768px) {
+		height: auto;
+	}
+
 	padding: 24px;
 `;
 
@@ -47,9 +51,17 @@ export const RecieveInfoContainer = styled.div`
 	display: flex;
 	padding: 20px;
 
+	@media (max-width: 768px) {
+		flex-direction: column;
+		height: auto;
+	}
+
 	& > div {
 		color: #181f25;
 		width: 50%;
+		@media (max-width: 768px) {
+			width: 100%;
+		}
 		& > span {
 			font-family: 'Roboto';
 			font-style: normal;

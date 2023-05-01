@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		font-family: "Roboto";
 		color: #181F25;
+		overflow-x: hidden;
 	  }
 	h1 {
 		margin: 0

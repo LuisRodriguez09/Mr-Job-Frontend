@@ -1,6 +1,5 @@
-import { gapi } from 'gapi-script';
-import { FC, useEffect } from 'react';
-import GoogleLogin from 'react-google-login';
+import { FC } from 'react';
+// import GoogleLogin from 'react-google-login';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Inputs/Button';
 import TextInput from '../../components/Inputs/TextInput';
@@ -21,26 +20,26 @@ import ImageForgotPassword from '../../images/pass.png';
 import { TitleContainer } from '../RegistrationForm/RegistrationFormStyles';
 
 const Login: FC = () => {
-	const clientId: string =
-		process.env.REACT_APP_AUTH_GOOGLE_CLIENT_ID !== undefined
-			? process.env.REACT_APP_AUTH_GOOGLE_CLIENT_ID
-			: '';
+	// const clientId: string =
+	// 	process.env.REACT_APP_AUTH_GOOGLE_CLIENT_ID !== undefined
+	// 		? process.env.REACT_APP_AUTH_GOOGLE_CLIENT_ID
+	// 		: '';
 
 	const navigate = useNavigate();
 
-	useEffect(() => {
-		const start: any = () => {
-			gapi.client.init({
-				clientId,
-				scope: '',
-			});
-		};
-		gapi.load('client:auth2', start);
-	});
+	// useEffect(() => {
+	// 	const start: any = () => {
+	// 		gapi.client.init({
+	// 			clientId,
+	// 			scope: '',
+	// 		});
+	// 	};
+	// 	gapi.load('client:auth2', start);
+	// });
 
-	const responseGoogle = (response: any): void => {
-		console.log(response);
-	};
+	// const responseGoogle = (response: any): void => {
+	// 	console.log(response);
+	// };
 
 	return (
 		<LoginViewContainer>
@@ -71,7 +70,9 @@ const Login: FC = () => {
 					</TextRedirectContainer>
 					<BoxField>
 						<LabelField></LabelField>
-						<Button size="full">Iniciar sesión</Button>
+						<Button size="full" onClick={() => navigate('/profile')}>
+							Iniciar sesión
+						</Button>
 					</BoxField>
 					<HaveAccountText>
 						¿No tienes una cuenta?{' '}
@@ -79,13 +80,13 @@ const Login: FC = () => {
 							Registrarme
 						</TextRedirect>
 					</HaveAccountText>
-					<GoogleLogin
+					{/* <GoogleLogin
 						clientId={clientId}
 						buttonText="Login"
 						onSuccess={responseGoogle}
 						onFailure={responseGoogle}
 						cookiePolicy={'single_host_origin'}
-					/>
+					/> */}
 				</FormContainer>
 			</LoginSide>
 		</LoginViewContainer>

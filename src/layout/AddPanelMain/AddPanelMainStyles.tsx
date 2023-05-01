@@ -10,6 +10,9 @@ export const ContainerNeedAService = styled.div`
 	margin: -30px;
 	& > div:first-child {
 		width: 70%;
+		@media (max-width: 640px) {
+			width: 100%;
+		}
 	}
 `;
 
@@ -20,9 +23,11 @@ export const ContainerFreeMonth = styled.div`
 	padding: 80px 50px;
 	& > div {
 		width: 50%;
+		@media (max-width: 768px) {
+			width: 100%;
+		}
 		display: flex;
 		justify-content: space-evenly;
-		flex-direction: column;
 		height: 100%;
 		& > p {
 			font-family: 'Roboto';
@@ -35,7 +40,7 @@ export const ContainerFreeMonth = styled.div`
 			align-items: center;
 		}
 		& > div {
-			width: 70%;
+			width: 80%;
 		}
 		& > p {
 			width: 60%;
@@ -53,6 +58,10 @@ export const TitleNeedAService = styled.h1`
 
 export const RightContentAddService = styled.div`
 	display: flex;
+	@media (max-width: 768px) {
+		display: none;
+	}
+
 	& > div {
 		width: 224px;
 		height: 291px;
@@ -84,6 +93,9 @@ export const RightContentAddService = styled.div`
 `;
 
 export const ContainerNameServices = styled.div`
+	@media (max-width: 1500px) {
+		display: none;
+	}
 	color: white;
 	background: #181f25;
 	display: flex;
@@ -106,5 +118,11 @@ export const ContainerNameServices = styled.div`
 		font-family: 'Roboto';
 		font-style: normal;
 		line-height: 27px;
+	}
+`;
+
+export const ImageWomanStyles = styled.img`
+	@media (max-width: 768px) {
+		display: none;
 	}
 `;

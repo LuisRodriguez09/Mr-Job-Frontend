@@ -1,10 +1,10 @@
 import { FC, useState } from 'react';
-import GoogleLogin from 'react-google-login';
+// import GoogleLogin from 'react-google-login';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Inputs/Button';
 import TextInput from '../../components/Inputs/TextInput';
 import TextRedirect from '../../components/TextRedirect';
-import { useStartLogin } from '../../hooks/useStartLogin';
+// import { useStartLogin } from '../../hooks/useStartLogin';
 import {
 	BoxField,
 	HaveAccountText,
@@ -26,7 +26,7 @@ const RegistrationForm: FC = () => {
 	const [registerAsJob, setRegisterAsJob] = useState(false);
 	const navigate = useNavigate();
 
-	const { clientId } = useStartLogin();
+	// const { clientId } = useStartLogin();
 
 	// useEffect(() => {
 	// 	startGapi();
@@ -93,13 +93,13 @@ const RegistrationForm: FC = () => {
 						O registrate con
 						<hr />
 					</OrRegisterWithStyles>
-					<GoogleLogin
+					{/* <GoogleLogin
 						clientId={clientId}
 						buttonText="Login"
 						onSuccess={() => navigate('/')}
 						onFailure={() => navigate('/')}
 						cookiePolicy={'single_host_origin'}
-					/>
+					/> */}
 				</FormContainer>
 			</LoginSide>
 		</LoginViewContainer>
